@@ -3,11 +3,12 @@
 //print encryptPassword("password");
 
 
-$mysql_bin = "/Applications/MAMP/Library/bin/mysql";
+//$mysql_bin = "/Applications/MAMP/Library/bin/mysql";
+$mysql_bin = "mysql";
 $username = "root";
-$password = "root";
+$password = "Gr00vy27";
 $database = "timesheets";
-$server   = "mubuntu.lan";
+$server   = "localhost";
 
 $fileList = ConvertDirArrayToList( getcwd(), dirToArray(getcwd())  );
 
