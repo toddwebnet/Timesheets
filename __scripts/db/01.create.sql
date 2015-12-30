@@ -77,3 +77,8 @@ ALTER TABLE security_user_role
 ADD CONSTRAINT fk_security_user_role_security_role
 FOREIGN KEY (role_id)
 REFERENCES security_role(role_id);
+
+
+########################################################################
+########################################################################
+########################################################################

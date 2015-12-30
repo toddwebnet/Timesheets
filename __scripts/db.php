@@ -7,7 +7,7 @@ $mysql_bin = "/Applications/MAMP/Library/bin/mysql";
 $username = "root";
 $password = "root";
 $database = "timesheets";
-$server   = "127.0.0.1";
+$server   = "mubuntu.lan";
 
 $fileList = ConvertDirArrayToList( getcwd(), dirToArray(getcwd())  );
 
