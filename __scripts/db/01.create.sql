@@ -48,8 +48,8 @@ create table security_user
 (
   user_id int AUTO_INCREMENT not null,
   contact_id int not null,
-  username varchar(64) not null,
-  salt varchar (16),
+  username varchar(64) UNIQUE not null,
+  salt varchar (32),
   password varchar(128),
   active_ind tinyint default 1 not null,
   primary key (user_id)

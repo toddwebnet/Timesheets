@@ -8,8 +8,9 @@
 */
 
 
-function print_object($data) {
-    if(!empty($data)) :
+function print_object($data)
+{
+    if (!empty($data)) :
         echo 'Code: <br />' . "\n";
         echo '<pre>';
         print_r($data);
@@ -19,22 +20,27 @@ function print_object($data) {
         echo 'CODE: The object is empty';
     endif;
 }
+
 function print_rr($data)
-{print_object($data);}
+{
+    print_object($data);
+}
 
 /*
     CREATE AN ARRAY OF ARRAYS TO LOOP THROUGH AND PRINT TO SCREEN
     SO DATA[ARRAY] => OBJECT , DATA[ARRAY] => OBJECT
 */
 
-function print_multiple_objects($data) {
+function print_multiple_objects($data)
+{
 
     echo 'Code: <br />' . "\n";
     //used for counting
     $i = 1;
 
-    foreach($data as $array) {
-        if(!empty($array)) :
+    foreach ($data as $array)
+    {
+        if (!empty($array)) :
             echo 'Array[' . $i . ']:<br />';
             echo '<pre>';
             print_r($array);
@@ -55,10 +61,11 @@ function print_multiple_objects($data) {
     DUMP SINGLE OBJECT TO SCREEN
 */
 
-function dump_object($data) {
+function dump_object($data)
+{
     echo 'Dump Code: <br />' . "\n";
     echo '<pre>';
-    if(!empty($data)) :
+    if (!empty($data)) :
         var_dump($data);
     else :
         echo 'The Object is empty';
@@ -72,14 +79,16 @@ function dump_object($data) {
     CREATE AN ARRAY OF OBJECTS TO LOOP THROUGH AND DUMP TO SCREEN
     SO DATA[ARRAY] => OBJECT, DATA[ARRAY] => OBJECT
 */
-function dump_multiple_objects($data) {
+function dump_multiple_objects($data)
+{
 
     echo 'Code: <br />' . "\n";
     //used for counting
     $i = 1;
 
-    foreach($data as $array) {
-        if(!empty($array)) :
+    foreach ($data as $array)
+    {
+        if (!empty($array)) :
             echo 'Array[' . $i . ']:<br />';
             echo '<pre>';
             var_dump($array);

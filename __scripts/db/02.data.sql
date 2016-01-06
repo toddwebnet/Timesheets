@@ -8,8 +8,8 @@ insert into security_role (role_id, role_name, role_code)
 values (2, 'Generic User', 'USER');
 
 insert into security_user (user_id, contact_id, username, salt, password) values (1, 1, 'admin',
-'K/eZ/d2UmkGIheEuhuNfls',
-'$2y$12$K/eZ/d2UmkGIheEuhuNfleeYWrvkzRj1TDMJNuxeKMgyjaN1MTwNS');
+'SJh8ls8YEqRJohzg2n.7O4',
+'$2y$12$SJh8ls8YEqRJohzg2n.7Oun0Y6RQXUuNkjSB10ZxsMND2v3fNWyli');
 
 insert into security_user_role(user_id, role_id)
 values (1, 1);
