@@ -72,9 +72,9 @@
         }
     ?>
     <div id="page-container"<?php if ($page_classes) { echo ' class="' . $page_classes . '"'; } ?>>
-        <?php if ($template['inc_sidebar_alt']) { include 'template/' . $template['inc_sidebar_alt'] . '.php'; } ?>
-        <?php if ($template['inc_sidebar']) { include 'template/' . $template['inc_sidebar'] . '.php'; } ?>
+        <?php if ($template['inc_sidebar_alt']) { include '' . $template['inc_sidebar_alt'] . '.php'; } ?>
+        <?php if ($template['inc_sidebar']) { include '' . $template['inc_sidebar'] . '.php'; } ?>
 
         <!-- Main Container -->
         <div id="main-container">
-            <?php if ($template['inc_header']) { include 'template/' . $template['inc_header'] . '.php'; } ?>
+            <?php if ($template['inc_header']) { include '' . $template['inc_header'] . '.php'; } ?>

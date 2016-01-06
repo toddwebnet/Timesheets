@@ -20,8 +20,8 @@ class LoginModel extends CI_Model
 
     public function validateCredentials($username, $password)
     {
-        $sql = "SELECT salt, password FROM security_user WHERE username = ?";
-        $param = array(":username" => $username);
+        $sql = "SELECT salt, password FROM security_user WHERE active_ind = 1 and username = ?";
+        $param = array($username);
         $userObj = getFirstResultFromQuery($sql, $param);
         if (!$userObj)
         {
@@ -36,6 +36,25 @@ class LoginModel extends CI_Model
         {
             return false;
         }
+
+    }
+
+    public function usernameExists($username)
+    {
+        $sql = "select count(*) num_users from security_user where active_ind = 1 and username = ?";
+        $param = array($username);
+        $results = getFirstResultFromQuery($sql, $param);
+        return ($results->num_users > 0)?true:false;
+    }
+
+    public function getUserInfoFromUsername($username)
+    {
+        $sql = "select su.user_id, su.username, c.first_name, c.last_name
+            from security_user su
+            inner join contact c on c.contact_id = su.contact_id
+            where su.active_ind = 1 and su.username = ?";
+        $param = array($username);
+        return getFirstResultFromQuery($sql, $param);
 
     }
 }
