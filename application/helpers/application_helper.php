@@ -1,5 +1,10 @@
 <?php
 
+function getSessionArray()
+{
+    $ci = &get_instance();
+    return $ci->session->userdata;
+}
 function checkLoggedIn()
 {
     $ci = &get_instance();
@@ -9,6 +14,4 @@ function checkLoggedIn()
     {
         redirect("/login");
     }
-
-
 }

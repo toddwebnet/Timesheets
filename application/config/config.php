@@ -23,7 +23,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["SERVER_NAME"];
+
+$request_scheme = "http";
+if(isset($_SERVER["REQUEST_SCHEME"]))
+{$request_scheme = $_SERVER["REQUEST_SCHEME"];}
+
+
+
+$config['base_url'] = $request_scheme . "://" . $_SERVER["SERVER_NAME"];
 
 /*
 |--------------------------------------------------------------------------

@@ -16,6 +16,7 @@
 
     'page-loading'      enables page preloader
 -->
+
 <div id="page-wrapper"<?php if ($template['page_preloader']) { echo ' class="page-loading"'; } ?>>
     <!-- Preloader -->
     <!-- Preloader functionality (initialized in js/app.js) - pageLoading() -->
@@ -72,8 +73,13 @@
         }
     ?>
     <div id="page-container"<?php if ($page_classes) { echo ' class="' . $page_classes . '"'; } ?>>
-        <?php if ($template['inc_sidebar_alt']) { include '' . $template['inc_sidebar_alt'] . '.php'; } ?>
-        <?php if ($template['inc_sidebar']) { include '' . $template['inc_sidebar'] . '.php'; } ?>
+        <?php
+
+        if ($template['inc_sidebar_alt']) { include '' . $template['inc_sidebar_alt'] . '.php'; }
+
+
+        if ($template['inc_sidebar']) { include '' . $template['inc_sidebar'] . '.php'; }
+        ?>
 
         <!-- Main Container -->
         <div id="main-container">

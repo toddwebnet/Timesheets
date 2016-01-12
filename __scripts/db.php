@@ -3,10 +3,10 @@
 //print encryptPassword("password");
 
 
-//$mysql_bin = "/Applications/MAMP/Library/bin/mysql";
-$mysql_bin = "mysql";
+$mysql_bin = "/Applications/MAMP/Library/bin/mysql";
+//$mysql_bin = "mysql";
 $username = "root";
-$password = "Gr00vy27";
+$password = "root";//"Gr00vy27";
 $database = "timesheets";
 $server   = "localhost";
 

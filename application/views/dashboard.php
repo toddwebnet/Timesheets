@@ -1,4 +1,6 @@
-<?php include 'template/config.php'; $template['header_link'] = 'WELCOME'; ?>
+<?php include 'template/config.php';
+$template['header_link'] = 'WELCOME';
+$template['username'] = $username;?>
 <?php include 'template/template_start.php'; ?>
 <?php include 'template/page_head.php'; ?>
 

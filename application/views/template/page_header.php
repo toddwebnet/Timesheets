@@ -23,14 +23,17 @@
         'header-fixed-bottom'   has to be added on #page-container only if the class 'navbar-fixed-bottom' was added
 -->
 <header class="navbar<?php if ($template['header_navbar']) { echo ' ' . $template['header_navbar']; } ?><?php if ($template['header']) { echo ' '. $template['header']; } ?>">
-    <!-- Left Header Navigation -->
+
+
+   <!-- Left Header Navigation -->
     <ul class="nav navbar-nav-custom">
         <!-- Main Sidebar Toggle Button -->
         <li>
-            <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar');this.blur();">
-                <i class="fa fa-ellipsis-v fa-fw animation-fadeInRight" id="sidebar-toggle-mini"></i>
-                <i class="fa fa-bars fa-fw animation-fadeInRight" id="sidebar-toggle-full"></i>
+            <a href="index.php" class="sidebar-title">
+                <i class="fa fa-cube"></i> <span class="sidebar-nav-mini-hide">Stupid <strong>Timesheets</strong></span>
             </a>
+        </li><li>
+            
         </li>
         <!-- END Main Sidebar Toggle Button -->
 
@@ -46,26 +49,11 @@
 
     <!-- Right Header Navigation -->
     <ul class="nav navbar-nav-custom pull-right">
-        <!-- Search Form -->
-        <li>
-            <form action="page_ready_search_results.php" method="post" class="navbar-form-custom" role="search">
-                <input type="text" id="top-search" name="top-search" class="form-control" placeholder="Search..">
-            </form>
-        </li>
-        <!-- END Search Form -->
-
-        <!-- Alternative Sidebar Toggle Button -->
-        <li>
-            <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar-alt');this.blur();">
-                <i class="gi gi-settings"></i>
-            </a>
-        </li>
-        <!-- END Alternative Sidebar Toggle Button -->
 
         <!-- User Dropdown -->
         <li class="dropdown">
             <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="img/placeholders/avatars/avatar9.jpg" alt="avatar">
+               <?php print $template['username'];?>
             </a>
             <ul class="dropdown-menu dropdown-menu-right">
                 <li class="dropdown-header">

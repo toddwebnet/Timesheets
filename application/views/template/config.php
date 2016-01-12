@@ -18,7 +18,7 @@ $template = array(
     'description'       => 'Everybody hates timesheets... but we gotta do them anyway',
     // true                         enable page preloader
     // false                        disable page preloader
-    'page_preloader'    => true,
+    'page_preloader'    => false,
     // 'navbar-default'             for a light header
     // 'navbar-inverse'             for a dark header
     'header_navbar'     => 'navbar-inverse',
@@ -33,7 +33,7 @@ $template = array(
     // 'sidebar-visible-lg-full'    main sidebar full - Full Navigation (> 991px)
     // 'sidebar-alt-visible-lg'     alternative sidebar visible by default (> 991px) (You can add it along with another class - leaving a space between)
     // 'sidebar-light'              for a light main sidebar (You can add it along with another class - leaving a space between)
-    'sidebar'           => 'sidebar-visible-lg-full',
+    'sidebar'           => '',//'sidebar-visible-lg-full',
     // ''                           Disable cookies (best for setting an active color theme from the next variable)
     // 'enable-cookies'             Enables cookies for remembering active color theme when changed from the sidebar links (the next color theme variable will be ignored)
     'cookies'           => '',
@@ -43,8 +43,8 @@ $template = array(
     'header_link'       => '',
     // The name of the files in the inc/ folder to be included in page_head.php - Can be changed per page if you
     // would like to have a different file included (eg a different alternative sidebar)
-    'inc_sidebar'       => 'page_sidebar',
-    'inc_sidebar_alt'   => 'page_sidebar_alt',
+    'inc_sidebar'       => '',//'page_sidebar',
+    'inc_sidebar_alt'   => '',//'page_sidebar_alt',
     'inc_header'        => 'page_header',
     // The following variable is used for setting the active link in the sidebar menu
     'active_page'       => basename($_SERVER['PHP_SELF'])
